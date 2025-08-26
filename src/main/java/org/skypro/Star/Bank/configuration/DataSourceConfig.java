@@ -13,11 +13,8 @@ import javax.sql.DataSource;
 
 @Configuration
 public class DataSourceConfig {
-
-
     /**
      * Основная БД (H2, read-only)
-     *
      */
     @Bean(name = "h2DataSource")
     @ConfigurationProperties(prefix = "spring.datasource.h2")
@@ -27,7 +24,6 @@ public class DataSourceConfig {
 
     /**
      * БД для динамических правил (PostgreSQL)
-     *
      */
     @Bean(name = "pgDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.postgres")

@@ -1,6 +1,8 @@
 package org.skypro.Star.Bank.service;
 
 import org.skypro.Star.Bank.dynamic.RuleCondition;
+import org.skypro.Star.Bank.model.enums.ProductType;
+import org.skypro.Star.Bank.model.enums.TransactionType;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

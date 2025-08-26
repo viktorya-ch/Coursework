@@ -1,6 +1,8 @@
 package org.skypro.Star.Bank.rule;
 
 import org.skypro.Star.Bank.model.DTO;
+import org.skypro.Star.Bank.model.enums.ProductType;
+import org.skypro.Star.Bank.model.enums.TransactionType;
 import org.skypro.Star.Bank.repository.UserProductRepository;
 import org.springframework.stereotype.Component;
 

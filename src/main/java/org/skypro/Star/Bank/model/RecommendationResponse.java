@@ -1,4 +1,6 @@
 package org.skypro.Star.Bank.model;
 
-public class RecommendationResponse {
+import java.util.List;
+
+public record RecommendationResponse(String user_id, List<DTO>recommendation) {
 }

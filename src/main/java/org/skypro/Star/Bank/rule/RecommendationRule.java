@@ -5,5 +5,5 @@ import org.skypro.Star.Bank.model.DTO;
 import java.util.Optional;
 
 public interface RecommendationRule {
-    Optional<DTO> check(String userld);
+    Optional<DTO> apply (String userId);
 }

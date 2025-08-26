@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import org.skypro.Star.Bank.model.DynamicRuleRequest;
 import org.skypro.Star.Bank.model.DynamicRuleResponse;
 import org.skypro.Star.Bank.model.RuleListResponse;
+import org.skypro.Star.Bank.model.RuleStatsResponse;
 import org.skypro.Star.Bank.service.DynamicRuleService;
 import org.skypro.Star.Bank.service.RuleStatisticService;
 import org.springframework.http.HttpStatus;
@@ -25,9 +26,9 @@ public class RuleController {
     }
 
     @GetMapping("/stats")
-    @ResponseStatus(HttpStatus.OK)
-    public RuleStatDTO.RuleStatsResponse getStats() {
-        return statisticService.getStat();
+    @ResponseStatus(HttpStatus.CREATED)
+    public RuleStatsResponse getStats() {
+        return statisticService.getStatistics();
     }
 
     @PostMapping
@@ -37,7 +38,7 @@ public class RuleController {
     }
 
     @GetMapping
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public RuleListResponse getAllRules() {
         return dynamicRuleService.getAllRules();
     }

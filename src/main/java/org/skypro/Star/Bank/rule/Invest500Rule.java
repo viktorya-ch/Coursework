@@ -26,4 +26,9 @@ public class Invest500Rule implements RecommendationRule {
         }
         return Optional.empty();
     }
+
+    @Override
+    public Optional<DTO> apply(String userId) {
+        return Optional.empty();
+    }
 }

@@ -1,6 +1,7 @@
 package org.skypro.Star.Bank.model;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class DTO {
     private String id;
@@ -59,6 +60,5 @@ public class DTO {
                 ", text='" + text + '\'' +
                 '}';
     }
-
 
 }

@@ -1,6 +1,8 @@
 package org.skypro.Star.Bank.service;
 
 import org.skypro.Star.Bank.model.RuleCondition;
+import org.skypro.Star.Bank.model.enums.ProductType;
+import org.skypro.Star.Bank.model.enums.TransactionType;
 import org.skypro.Star.Bank.repository.CachedUserRepository;
 import org.springframework.stereotype.Service;
 

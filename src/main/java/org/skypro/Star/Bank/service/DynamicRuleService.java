@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.skypro.Star.Bank.dynamic.DynamicRule;
 import org.skypro.Star.Bank.model.DynamicRuleRequest;
+import org.skypro.Star.Bank.model.DynamicRuleResponse;
 import org.skypro.Star.Bank.model.RuleListResponse;
 import org.skypro.Star.Bank.repository.DynamicRuleRepository;
 import org.springframework.stereotype.Service;
