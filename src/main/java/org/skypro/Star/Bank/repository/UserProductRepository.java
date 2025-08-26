@@ -1,6 +1,5 @@
 package org.skypro.Star.Bank.repository;
 
-import org.skypro.Star.Bank.model.enums.ProductType;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

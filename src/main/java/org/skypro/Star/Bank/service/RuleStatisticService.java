@@ -21,7 +21,7 @@ public class RuleStatisticService {
         this.dynamicRuleService = dynamicRuleService;
     }
 
-        public RuleStatsResponse getStatistics() {
+    public RuleStatsResponse getStatistics() {
         List<RuleStat> stats = repository.findAll();
         List<RuleStatDTO> statDTOs = stats.stream()
                 .map(stat -> new RuleStatDTO(
@@ -30,7 +30,7 @@ public class RuleStatisticService {
                 ))
                 .toList();
 
-        // Добавляем правила без статистики
+
         List<RuleStatDTO> allStats = dynamicRuleService.getAllRules().data().stream()
                 .map(rule -> new RuleStatDTO(
                         rule.id(),

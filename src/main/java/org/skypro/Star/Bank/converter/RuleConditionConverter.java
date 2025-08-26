@@ -10,8 +10,7 @@ import org.skypro.Star.Bank.dynamic.RuleCondition;
 import java.util.List;
 
 @Converter
-public class RuleConditionConverter  implements AttributeConverter<List<RuleCondition>, String> {
-
+public class RuleConditionConverter implements AttributeConverter<List<RuleCondition>, String> {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     @Override
@@ -27,7 +26,8 @@ public class RuleConditionConverter  implements AttributeConverter<List<RuleCond
     public List<RuleCondition> convertToEntityAttribute(String dbData) {
         try {
             return mapper.readValue(dbData,
-                    new TypeReference<List<RuleCondition>>(){});
+                    new TypeReference<List<RuleCondition>>() {
+                    });
         } catch (JsonProcessingException e) {
             throw new IllegalArgumentException("Error parsing rule JSON", e);
         }

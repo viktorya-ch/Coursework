@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 import java.util.Optional;
 
 @Component
-
 public class SimpleCreditRule implements RecommendationRule {
     private static final String PRODUCT_ID = "ab138afb-f3ba-4a93-b74f-0fcee86d447f";
     private static final String PRODUCT_NAME = "Простой кредит";

@@ -16,6 +16,7 @@ public class RuleValidator {
             validateCondition(condition);
         }
     }
+
     private void validateCondition(RuleCondition condition) {
         switch (condition.getQuery()) {
             case "USER_OF", "ACTIVE_USER_OF" -> validateArguments(condition, 1, ProductType.class);
@@ -28,24 +29,25 @@ public class RuleValidator {
             default -> throw new IllegalArgumentException(" Недопустимый тип запроса " + condition.getQuery());
         }
     }
-    private void validateArguments(RuleCondition condition, int expectedSize, Class<?extends Enum<?>>...enums){
+
+    private void validateArguments(RuleCondition condition, int expectedSize, Class<? extends Enum<?>>... enums) {
         if (condition.getArguments().size() != expectedSize) {
             throw new IllegalArgumentException(
                     " Недопустимые аргументы для " + condition.getQuery());
         }
-        for (int i = 0; i < enums.length; i++){
+        for (int i = 0; i < enums.length; i++) {
             try {
-                Enum.valueOf(enums[i],condition.getArguments().get(i));
-            }catch (IllegalArgumentException e){
+                Enum.valueOf(enums[i], condition.getArguments().get(i));
+            } catch (IllegalArgumentException e) {
                 throw new IllegalArgumentException(" Недопустимые значения аргументов " + condition.getArguments().get(i));
             }
         }
     }
 
-    private void validateNumber(String value){
+    private void validateNumber(String value) {
         try {
             new BigDecimal(value);
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             throw new IllegalArgumentException(" Неверный номер " + value);
         }
     }

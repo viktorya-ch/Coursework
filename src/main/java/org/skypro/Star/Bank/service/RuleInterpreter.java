@@ -1,6 +1,6 @@
 package org.skypro.Star.Bank.service;
 
-import org.skypro.Star.Bank.model.RuleCondition;
+import org.skypro.Star.Bank.dynamic.RuleCondition;
 import org.skypro.Star.Bank.model.enums.ProductType;
 import org.skypro.Star.Bank.model.enums.TransactionType;
 import org.skypro.Star.Bank.repository.CachedUserRepository;
@@ -32,7 +32,7 @@ public class RuleInterpreter {
     /**
      * Выполняет одно условие правила
      *
-     * @param userId Идентификатор пользователя
+     * @param userId    Идентификатор пользователя
      * @param condition Условие для проверки
      * @return Результат проверки условия с учетом отрицания
      */

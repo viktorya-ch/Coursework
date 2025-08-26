@@ -31,29 +31,19 @@ public class Config {
     @Bean(name = " ")
     public LocalContainerEntityManagerFactoryBean dynamicEntityManagerFactory() {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-
         vendorAdapter.setDatabasePlatform(" org.hibernate.dialect.PostgreSQLDialect ");
-
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
-
         factory.setJpaVendorAdapter(vendorAdapter);
-
         factory.setPackagesToScan(" com.bank.star.model.dynamic ");
-
         factory.setDataSource(postgresDataSource());
-
         jpaProperties.put(" hibernate.jdbc.lob.non_contextual_creation ", true);
-
         factory.setJpaProperties(jpaProperties);
-
         return factory;
-
     }
 
     @Bean
     public PlatformTransactionManager dynamicTransactionManager() {
         JpaTransactionManager txManager = new JpaTransactionManager();
-
         txManager.setEntityManagerFactory(dynamicEntityManagerFactory().getObject());
         return txManager;
     }

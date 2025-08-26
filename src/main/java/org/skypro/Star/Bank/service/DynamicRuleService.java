@@ -46,6 +46,7 @@ public class DynamicRuleService {
 
     /**
      * Получает все активные правила
+     *
      * @return Обертка со списком правил
      */
     public RuleListResponse getAllRules() {

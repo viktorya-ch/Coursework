@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/management")
 public class ManagementController {
 
-
     private final CacheManager cacheManager;
     private final CachedUserRepository cachedUserRepository;
 

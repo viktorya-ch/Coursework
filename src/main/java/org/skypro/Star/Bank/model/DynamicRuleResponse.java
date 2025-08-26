@@ -1,5 +1,7 @@
 package org.skypro.Star.Bank.model;
 
+import org.skypro.Star.Bank.dynamic.RuleCondition;
+
 import java.util.List;
 import java.util.UUID;
 

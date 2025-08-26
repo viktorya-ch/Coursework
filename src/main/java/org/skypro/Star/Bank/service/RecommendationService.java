@@ -12,7 +12,6 @@ import java.util.UUID;
 
 /**
  * Сервис для генерации персонализированных рекомендаций банковских продуктов.
- *
  */
 @Service
 public class RecommendationService {
@@ -25,6 +24,7 @@ public class RecommendationService {
 
     /**
      * Получает рекомендации для указанного пользователя
+     *
      * @param userId UUID пользователя в строковом формате
      * @return Список рекомендаций
      */

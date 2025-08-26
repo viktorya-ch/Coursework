@@ -22,7 +22,6 @@ public class RuleController {
     public RuleController(RuleStatisticService statisticService, DynamicRuleService dynamicRuleService) {
         this.statisticService = statisticService;
         this.dynamicRuleService = dynamicRuleService;
-
     }
 
     @GetMapping("/stats")

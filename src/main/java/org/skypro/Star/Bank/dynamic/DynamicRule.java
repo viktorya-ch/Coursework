@@ -41,10 +41,6 @@ public class DynamicRule {
         this.productText = productText;
     }
 
-    public DynamicRule() {
-
-    }
-
     public UUID getId() {
         return id;
     }
@@ -96,9 +92,6 @@ public class DynamicRule {
     @Override
     public int hashCode() {
         return Objects.hash(id, productName, productId, productText);
-    }
-
-    public void setConditions(List<com.example.demo.dynamic.RuleCondition> rule) {
     }
 
     public void setRule(List<RuleCondition> condition) {

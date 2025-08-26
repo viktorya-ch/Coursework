@@ -24,17 +24,14 @@ public class JpaConfig {
     public LocalContainerEntityManagerFactoryBean dynamicEntityManagerFactory() {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setDatabasePlatform("org.hibernate.dialect.PostgreSQLDialect");
-
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("com.bank.star.model.dynamic");
         factory.setDataSource(postgresDataSource());
-
         Properties jpaProperties = new Properties();
         jpaProperties.put("hibernate.hbm2ddl.auto", "validate");
         jpaProperties.put("hibernate.jdbc.lob.non_contextual_creation", true);
         factory.setJpaProperties(jpaProperties);
-
         return factory;
     }
 
